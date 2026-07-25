@@ -67,4 +67,4 @@ rss-fetcher/
 
 ## License
 
-MIT
+[MIT](LICENSE)
