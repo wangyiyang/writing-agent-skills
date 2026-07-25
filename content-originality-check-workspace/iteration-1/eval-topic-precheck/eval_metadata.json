@@ -1,0 +1,11 @@
+{
+  "eval_id": 3,
+  "eval_name": "topic-precheck",
+  "prompt": "我想写一篇「用 Claude Code 自动化周报」的文章发掘金，帮我看看这个选题会不会太泛滥",
+  "assertions": [
+    {"text": "执行了某种形式的同质化预检（web 搜索或基于已知信息评估同题内容饱和度）", "passed": false},
+    {"text": "给出明确的饱和度判断（饱和/不饱和/部分饱和），不含糊", "passed": false},
+    {"text": "若判断饱和，给出至少 1 个差异化切口建议或换选题建议", "passed": false},
+    {"text": "建议具体可执行（如限定具体场景、具体工作流细节），不是空话", "passed": false}
+  ]
+}

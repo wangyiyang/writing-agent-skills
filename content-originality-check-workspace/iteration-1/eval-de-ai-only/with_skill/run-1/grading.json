@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "只做去味不重构（尊重用户约束）",
+      "passed": true,
+      "evidence": "命中关键词: 去味、不重构"
+    },
+    {
+      "text": "保留真实数据「误报率从 15% 降到 2%」",
+      "passed": true,
+      "evidence": "命中关键词: 15%、2%"
+    },
+    {
+      "text": "识别并处理「此外」「值得一提的是」填充短语",
+      "passed": true,
+      "evidence": "命中关键词: 此外、值得一提、填充"
+    },
+    {
+      "text": "识别并处理「无缝、直观和强大」三段式宣传语言",
+      "passed": true,
+      "evidence": "命中关键词: 三段式、三连、无缝、排比"
+    },
+    {
+      "text": "识别并处理否定式排比或「彰显了」肤浅收尾",
+      "passed": true,
+      "evidence": "命中关键词: 不仅仅、彰显、否定式、肤浅收尾"
+    },
+    {
+      "text": "给出质量评分（或等量化改后自评）",
+      "passed": true,
+      "evidence": "命中关键词: 评分、得分、分"
+    }
+  ],
+  "summary": {
+    "pass_rate": 1,
+    "passed": 6,
+    "failed": 0,
+    "total": 6
+  }
+}

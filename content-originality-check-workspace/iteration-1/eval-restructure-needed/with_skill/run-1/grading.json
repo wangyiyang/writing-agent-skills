@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "诊断出选题层同质化问题（第二大脑/PARA 题材泛滥）",
+      "passed": true,
+      "evidence": "命中关键词: 同质、选题、泛滥、饱和"
+    },
+    {
+      "text": "诊断出结构层搬运问题（观点主体是 Forte/纳瓦尔而非作者）",
+      "passed": true,
+      "evidence": "命中关键词: 观点主体"
+    },
+    {
+      "text": "整体判断为「需要重构」而非仅去味",
+      "passed": true,
+      "evidence": "命中关键词: 需要重构、必须重构、整体重构、不建议"
+    },
+    {
+      "text": "识别出至少 3 个具体 AI 痕迹模式",
+      "passed": true,
+      "evidence": "命中关键词: 此外、格局、排比、破折号"
+    },
+    {
+      "text": "诊断指到原文具体句子",
+      "passed": true,
+      "evidence": "命中关键词: 原文、原句、「"
+    },
+    {
+      "text": "给出引用篇幅或观点主体占比的量化判断",
+      "passed": true,
+      "evidence": "命中关键词: 抽走引用、引用占、20%、六成"
+    }
+  ],
+  "summary": {
+    "pass_rate": 1,
+    "passed": 6,
+    "failed": 0,
+    "total": 6
+  }
+}

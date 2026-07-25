@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "诊断出选题层同质化问题（第二大脑/PARA 题材泛滥）",
+      "passed": false,
+      "evidence": "未通过。未找到相关表述（输出长度 2326 字符）"
+    },
+    {
+      "text": "诊断出结构层搬运问题（观点主体是 Forte/纳瓦尔而非作者）",
+      "passed": true,
+      "evidence": "命中关键词: 他人框架"
+    },
+    {
+      "text": "整体判断为「需要重构」而非仅去味",
+      "passed": true,
+      "evidence": "命中关键词: 重写、不建议"
+    },
+    {
+      "text": "识别出至少 3 个具体 AI 痕迹模式",
+      "passed": true,
+      "evidence": "命中关键词: 格局、专家认为、值得注意的是、未来看起来光明"
+    },
+    {
+      "text": "诊断指到原文具体句子",
+      "passed": true,
+      "evidence": "命中关键词: 「"
+    },
+    {
+      "text": "给出引用篇幅或观点主体占比的量化判断",
+      "passed": true,
+      "evidence": "命中关键词: %"
+    }
+  ],
+  "summary": {
+    "pass_rate": 0.8333333333333334,
+    "passed": 5,
+    "failed": 1,
+    "total": 6
+  }
+}

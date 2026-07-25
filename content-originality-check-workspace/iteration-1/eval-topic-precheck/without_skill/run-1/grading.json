@@ -1,0 +1,30 @@
+{
+  "expectations": [
+    {
+      "text": "执行了同质化预检（搜索或基于已知评估饱和度）",
+      "passed": true,
+      "evidence": "命中关键词: 搜索、掘金、API"
+    },
+    {
+      "text": "给出明确的饱和度判断，不含糊",
+      "passed": true,
+      "evidence": "命中关键词: 泛滥、不泛滥"
+    },
+    {
+      "text": "给出至少 1 个差异化切口或换选题建议",
+      "passed": true,
+      "evidence": "命中关键词: 差异化、建议、避开"
+    },
+    {
+      "text": "建议具体可执行（非空话）",
+      "passed": true,
+      "evidence": "命中关键词: Skill、Hook、配置、git log"
+    }
+  ],
+  "summary": {
+    "pass_rate": 1,
+    "passed": 4,
+    "failed": 0,
+    "total": 4
+  }
+}
