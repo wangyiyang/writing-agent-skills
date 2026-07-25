@@ -1,0 +1,250 @@
+{
+  "sources": [
+    {
+      "name": "何夕2077",
+      "url": "https://hex2077.dev/rss",
+      "weight": 0.8,
+      "status": "active",
+      "notes": "何夕2077 的数字空间：AI 资讯日报 / 深度信号周报 / 博客"
+    },
+    {
+      "name": "腾讯云开发者社区",
+      "url": "https://cloud.tencent.com/developer/rss",
+      "weight": 0.8,
+      "status": "broken",
+      "notes": "RSS 接口已下线，所有 RSS 路径返回 404"
+    },
+    {
+      "name": "SegmentFault",
+      "url": "https://segmentfault.com/feeds",
+      "weight": 0.8,
+      "status": "active",
+      "notes": "需要浏览器 User-Agent，否则返回 410"
+    },
+    {
+      "name": "阿里技术",
+      "url": "https://developer.aliyun.com/group/rss",
+      "weight": 0.9,
+      "status": "broken",
+      "notes": "RSS 接口已下线，所有 RSS 路径返回 404"
+    },
+    {
+      "name": "字节跳动技术博客",
+      "url": "https://tech.bytedance.net/rss",
+      "weight": 0.9,
+      "status": "broken",
+      "notes": "域名已废弃，DNS 解析到内网 IP，无法访问"
+    },
+    {
+      "name": "OSChina",
+      "url": "https://www.oschina.net/news/rss",
+      "weight": 0.7,
+      "status": "active",
+      "notes": "需要浏览器 User-Agent，否则返回 403"
+    },
+    {
+      "name": "掘金",
+      "url": "https://juejin.cn/rss",
+      "weight": 0.8,
+      "status": "active"
+    },
+    {
+      "name": "Google Cloud Blog",
+      "url": "https://cloud.google.com/blog/feeds/all.atom",
+      "proxy_url": "https://cors.eu.org/https%3A%2F%2Fgooglecloudplatform.blogspot.com%2Ffeeds%2Fposts%2Fdefault",
+      "weight": 0.9,
+      "status": "active",
+      "notes": "原站被墙，需通过 cors.eu.org 代理访问 blogspot 镜像"
+    },
+    {
+      "name": "AWS News Blog",
+      "url": "https://aws.amazon.com/blogs/aws/feed/",
+      "weight": 0.9,
+      "status": "active"
+    },
+    {
+      "name": "阮一峰的网络日志",
+      "url": "http://www.ruanyifeng.com/blog/atom.xml",
+      "weight": 1.0,
+      "status": "active",
+      "notes": "需要浏览器 User-Agent，否则返回 403"
+    },
+    {
+      "name": "Redis Blog",
+      "url": "https://redis.io/blog/feed/",
+      "weight": 0.8,
+      "status": "active"
+    },
+    {
+      "name": "InfoQ 中文站",
+      "url": "https://www.infoq.cn/feed",
+      "weight": 1.0,
+      "status": "active",
+      "notes": "需要浏览器 User-Agent，否则返回 451"
+    },
+    {
+      "name": "Python Insider",
+      "url": "https://pythoninsider.blogspot.com/feeds/posts/default",
+      "proxy_url": "https://cors.eu.org/https%3A%2F%2Fpythoninsider.blogspot.com%2Ffeeds%2Fposts%2Fdefault",
+      "weight": 0.9,
+      "status": "active",
+      "notes": "blogspot 被墙，需通过 cors.eu.org 代理"
+    },
+    {
+      "name": "Azure Blog",
+      "url": "https://azure.microsoft.com/en-us/blog/feed/",
+      "weight": 0.9,
+      "status": "active"
+    },
+    {
+      "name": "MongoDB Blog",
+      "url": "https://www.mongodb.com/blog/rss",
+      "weight": 0.8,
+      "status": "active"
+    },
+    {
+      "name": "美团技术团队",
+      "url": "https://tech.meituan.com/feed/",
+      "weight": 1.0,
+      "status": "active"
+    },
+    {
+      "name": "High Scalability",
+      "url": "https://highscalability.com/rss/",
+      "weight": 0.9,
+      "status": "active",
+      "notes": "响应较慢（~10s）"
+    },
+    {
+      "name": "Go Blog",
+      "url": "https://go.dev/blog/feed.atom",
+      "weight": 0.9,
+      "status": "active"
+    },
+    {
+      "name": "ACM TechNews",
+      "url": "https://technews.acm.org/rss.xml",
+      "weight": 0.9,
+      "status": "broken",
+      "notes": "Cloudflare WAF 拦截，所有方法均无法绕过"
+    },
+    {
+      "name": "Dev.to",
+      "url": "https://dev.to/feed",
+      "weight": 0.9,
+      "status": "active",
+      "notes": "响应较慢（~6s）"
+    },
+    {
+      "name": "Lambda the Ultimate",
+      "url": "http://lambda-the-ultimate.org/rss.xml",
+      "weight": 0.9,
+      "status": "broken",
+      "timeout": 90,
+      "notes": "服务器极不稳定（502/超时交替出现），不建议使用"
+    },
+    {
+      "name": "Rust Blog",
+      "url": "https://blog.rust-lang.org/feed.xml",
+      "weight": 0.9,
+      "status": "active",
+      "notes": "响应较慢（~8.7s）"
+    },
+    {
+      "name": "Docker Blog",
+      "url": "https://www.docker.com/blog/feed/",
+      "weight": 1.0,
+      "status": "broken",
+      "notes": "RSS 接口已下线，feed URL 返回 HTML 而非 RSS"
+    },
+    {
+      "name": "CNCF",
+      "url": "https://www.cncf.io/feed/",
+      "weight": 1.0,
+      "status": "active"
+    },
+    {
+      "name": "IEEE Spectrum",
+      "url": "https://spectrum.ieee.org/rss",
+      "weight": 0.9,
+      "status": "broken",
+      "notes": "Varnish WAF 拦截，所有方法均无法绕过"
+    },
+    {
+      "name": "Kubernetes Blog",
+      "url": "https://kubernetes.io/feed.xml",
+      "weight": 1.0,
+      "status": "active"
+    },
+    {
+      "name": "GitHub Trending",
+      "url": "https://github.com/trending",
+      "weight": 1.0,
+      "status": "broken",
+      "notes": "HTML 页面而非 RSS，且响应超时，不可用"
+    },
+    {
+      "name": "The Verge",
+      "url": "https://www.theverge.com/rss/index.xml",
+      "weight": 0.8,
+      "status": "active"
+    },
+    {
+      "name": "HackNews",
+      "url": "https://hnrss.org/show",
+      "weight": 1.2,
+      "status": "active"
+    },
+    {
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/feed/",
+      "weight": 1.0,
+      "status": "active"
+    },
+    {
+      "name": "The Register",
+      "url": "https://www.theregister.com/headlines.atom",
+      "weight": 0.8,
+      "status": "broken",
+      "notes": "RSS/Atom 接口已下线，所有 feed URL 返回 HTML"
+    },
+    {
+      "name": "Reddit r/programming",
+      "url": "https://www.reddit.com/r/programming.rss",
+      "weight": 1.0,
+      "status": "broken",
+      "notes": "GFW 完全封锁，所有代理均失败"
+    },
+    {
+      "name": "Wired",
+      "url": "https://www.wired.com/feed/rss",
+      "weight": 0.8,
+      "status": "active"
+    },
+    {
+      "name": "InfoQ 英文站",
+      "url": "https://feed.infoq.com/",
+      "weight": 1.0,
+      "status": "active"
+    },
+    {
+      "name": "Ars Technica",
+      "url": "https://feeds.arstechnica.com/arstechnica/index",
+      "weight": 0.8,
+      "status": "active"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/feed/",
+      "weight": 0.8,
+      "status": "active"
+    },
+    {
+      "name": "CSDN 资讯",
+      "url": "https://blog.csdn.net/rss.html",
+      "weight": 0.6,
+      "status": "broken",
+      "notes": "RSS 接口已下线，返回 JS 反爬挑战"
+    }
+  ]
+}
