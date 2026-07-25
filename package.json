@@ -1,0 +1,34 @@
+{
+  "name": "rss-fetcher-skill",
+  "version": "1.0.0",
+  "description": "RSS feed aggregator with keyword filtering - fetch RSS results within a date range",
+  "main": "index.js",
+  "bin": {
+    "rss-fetcher": "./bin/rss-fetcher.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rss",
+    "feed",
+    "aggregator",
+    "keyword-filter",
+    "tech-news",
+    "ai",
+    "llm"
+  ],
+  "author": "wangyiyang",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangyiyang/writing-agent-skills.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wangyiyang/writing-agent-skills/issues"
+  },
+  "homepage": "https://github.com/wangyiyang/writing-agent-skills#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
