@@ -28,6 +28,22 @@ python3 rss-fetcher/scripts/fetch_rss.py --days 3
 
 详见 [content-originality-check/SKILL.md](content-originality-check/SKILL.md)。
 
+### notion-to-blog
+
+将 Notion 页面自动转化为 Jekyll 博客文章。
+
+- 全自动：提取页面属性 → 下载 Markdown → 下载图片 → 生成 Front Matter → Jekyll 构建验证
+- 自动处理 Notion 特有标记（callout、空块、图片路径替换）
+- md5 去重验证图片，防顺序错乱
+- 通过 `BLOG_ROOT` 环境变量适配任意 Jekyll 博客
+
+```bash
+export BLOG_ROOT=/path/to/jekyll-blog
+python3 notion-to-blog/convert.py <notion-page-uuid-or-url>
+```
+
+详见 [notion-to-blog/SKILL.md](notion-to-blog/SKILL.md)。
+
 ## 项目结构
 
 ```
@@ -35,10 +51,13 @@ python3 rss-fetcher/scripts/fetch_rss.py --days 3
 │   ├── SKILL.md
 │   ├── data/                    # 源列表 + 关键词配置
 │   └── scripts/                 # 抓取脚本
-└── content-originality-check/   # 原创性自检 skill
+├── content-originality-check/   # 原创性自检 skill
+│   ├── SKILL.md
+│   ├── references/              # AI 痕迹模式库（渐进式加载）
+│   └── evals/                   # 测试用例
+└── notion-to-blog/              # Notion → Jekyll 转换 skill
     ├── SKILL.md
-    ├── references/              # AI 痕迹模式库（渐进式加载）
-    └── evals/                   # 测试用例
+    └── convert.py               # 全自动转换脚本
 ```
 
 ## License
