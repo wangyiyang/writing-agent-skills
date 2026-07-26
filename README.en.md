@@ -109,13 +109,10 @@ npx skills remove    # Uninstall
 ├── content-originality-check/   # Originality review skill
 │   ├── SKILL.md
 │   ├── references/              # AI-trace pattern library (progressive loading)
-│   └── evals/                   # Test cases
-├── notion-to-blog/              # Notion → Jekyll converter skill
-│   ├── SKILL.md
-│   └── convert.py               # Fully automated conversion script
-└── eval-workspaces/             # Eval run results for each skill
-    └── content-originality-check/
-        └── iteration-1/         # Benchmark + with/without-skill comparison outputs
+│   └── evals/                   # Test cases (evals.json) + eval run results (iteration-1/)
+└── notion-to-blog/              # Notion → Jekyll converter skill
+    ├── SKILL.md
+    └── convert.py               # Fully automated conversion script
 ```
 
 ## Follow the WeChat Official Account

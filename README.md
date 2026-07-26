@@ -109,13 +109,10 @@ npx skills remove    # 卸载
 ├── content-originality-check/   # 原创性自检 skill
 │   ├── SKILL.md
 │   ├── references/              # AI 痕迹模式库(渐进式加载)
-│   └── evals/                   # 测试用例
-├── notion-to-blog/              # Notion → Jekyll 转换 skill
-│   ├── SKILL.md
-│   └── convert.py               # 全自动转换脚本
-└── eval-workspaces/             # 各 skill 的评测运行结果
-    └── content-originality-check/
-        └── iteration-1/         # benchmark + with/without skill 对照输出
+│   └── evals/                   # 测试用例(evals.json)+ 评测运行结果(iteration-1/)
+└── notion-to-blog/              # Notion → Jekyll 转换 skill
+    ├── SKILL.md
+    └── convert.py               # 全自动转换脚本
 ```
 
 ## 关注公众号
