@@ -61,6 +61,7 @@
   ],
   "negative_keywords": [
     {"keyword": "力扣", "category": "", "weight": null},
+    {"keyword": "LeetCode", "category": "不相关", "weight": null},
     {"keyword": "MateClaw", "category": "不相关", "weight": null},
     {"keyword": "明星", "category": "不相关", "weight": null},
     {"keyword": "股票", "category": "不相关", "weight": null},
