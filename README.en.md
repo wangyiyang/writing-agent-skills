@@ -8,9 +8,9 @@ A collection of writing-related Agent Skills, installable in one command via [`n
 
 | Skill | Description | Docs |
 | --- | --- | --- |
-| `rss-fetcher` | Fetch RSS feeds within a date range, with keyword filtering and weighted scoring | [SKILL.md](rss-fetcher/SKILL.md) |
-| `content-originality-check` | Pre-publish originality review (anti "low-originality" penalties): diagnose and revise drafts | [SKILL.md](content-originality-check/SKILL.md) |
-| `notion-to-blog` | Automatically convert Notion pages into Jekyll blog posts | [SKILL.md](notion-to-blog/SKILL.md) |
+| `rss-fetcher` | Fetch RSS feeds within a date range, with keyword filtering and weighted scoring | [SKILL.md](skills/rss-fetcher/SKILL.md) |
+| `content-originality-check` | Pre-publish originality review (anti "low-originality" penalties): diagnose and revise drafts | [SKILL.md](skills/content-originality-check/SKILL.md) |
+| `notion-to-blog` | Automatically convert Notion pages into Jekyll blog posts | [SKILL.md](skills/notion-to-blog/SKILL.md) |
 
 ## Installation
 
@@ -47,7 +47,7 @@ By default, skills are installed into the project directory (e.g. `.agents/skill
 git clone https://github.com/wangyiyang/writing-agent-skills.git
 ```
 
-Then copy (or symlink) the skill directories you need into your agent's skills directory, e.g. `~/.claude/skills/` for Claude Code or the generic `~/.agents/skills/`.
+Then copy (or symlink) the skill directories you need from `skills/` into your agent's skills directory, e.g. `~/.claude/skills/` for Claude Code or the generic `~/.agents/skills/`.
 
 ## Usage
 
@@ -60,10 +60,10 @@ Fetch RSS feeds within a date range, with keyword filtering and weighted scoring
 - Weighted scoring, three output formats (JSON / Markdown / Text), concurrent fetching
 
 ```bash
-python3 rss-fetcher/scripts/fetch_rss.py --days 3
+python3 skills/rss-fetcher/scripts/fetch_rss.py --days 3
 ```
 
-See [rss-fetcher/SKILL.md](rss-fetcher/SKILL.md) for details.
+See [skills/rss-fetcher/SKILL.md](skills/rss-fetcher/SKILL.md) for details.
 
 ### content-originality-check
 
@@ -73,7 +73,7 @@ Pre-publish originality review (anti "low-originality" penalties). Diagnose and 
 - A complete library of AI-writing trace patterns (content, language, formatting, conversational residue — with before/after examples)
 - 50-point quality score; anything below 45 goes back for revision
 
-See [content-originality-check/SKILL.md](content-originality-check/SKILL.md) for details.
+See [skills/content-originality-check/SKILL.md](skills/content-originality-check/SKILL.md) for details.
 
 ### notion-to-blog
 
@@ -86,10 +86,10 @@ Automatically convert Notion pages into Jekyll blog posts.
 
 ```bash
 export BLOG_ROOT=/path/to/jekyll-blog
-python3 notion-to-blog/convert.py <notion-page-uuid-or-url>
+python3 skills/notion-to-blog/convert.py <notion-page-uuid-or-url>
 ```
 
-See [notion-to-blog/SKILL.md](notion-to-blog/SKILL.md) for details.
+See [skills/notion-to-blog/SKILL.md](skills/notion-to-blog/SKILL.md) for details.
 
 ## Managing Installed Skills
 
@@ -102,17 +102,21 @@ npx skills remove    # Uninstall
 ## Project Structure
 
 ```
-├── rss-fetcher/                 # RSS fetcher skill
-│   ├── SKILL.md
-│   ├── data/                    # Source list + keyword config
-│   └── scripts/                 # Fetch scripts
-├── content-originality-check/   # Originality review skill
-│   ├── SKILL.md
-│   ├── references/              # AI-trace pattern library (progressive loading)
-│   └── evals/                   # Test cases (evals.json) + eval run results (iteration-1/)
-└── notion-to-blog/              # Notion → Jekyll converter skill
-    ├── SKILL.md
-    └── convert.py               # Fully automated conversion script
+├── skills/                          # All skills (standard npx skills discovery directory)
+│   ├── rss-fetcher/                 # RSS fetcher skill
+│   │   ├── SKILL.md
+│   │   ├── data/                    # Source list + keyword config
+│   │   └── scripts/                 # Fetch scripts
+│   ├── content-originality-check/   # Originality review skill
+│   │   ├── SKILL.md
+│   │   ├── references/              # AI-trace pattern library (progressive loading)
+│   │   └── evals/                   # Test cases (evals.json)
+│   └── notion-to-blog/              # Notion → Jekyll converter skill
+│       ├── SKILL.md
+│       └── convert.py               # Fully automated conversion script
+└── eval-workspaces/                 # Eval run results
+    └── content-originality-check/
+        └── iteration-1/             # Benchmark + with/without-skill comparison outputs
 ```
 
 ## Follow the WeChat Official Account
