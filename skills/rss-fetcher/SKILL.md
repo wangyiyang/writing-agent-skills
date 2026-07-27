@@ -40,14 +40,41 @@ python3 scripts/fetch_rss.py --days 3 --min-score 2
 
 | 参数 | 说明 |
 |------|------|
-| `--days N` | 抓取最近 N 天的文章 |
-| `--start-date` | 开始日期 (YYYY-MM-DD) |
-| `--end-date` | 结束日期 (YYYY-MM-DD) |
+| `--days N` | 抓取最近 N 天的文章（⚠️ 注意是 `now() - N*24h`，不是自然天） |
+| `--start-date` | 开始日期 (YYYY-MM-DD)，取当天 00:00 UTC |
+| `--end-date` | 结束日期 (YYYY-MM-DD)，取当天 23:59:59 UTC |
 | `--source` | 按名称过滤源 |
 | `--no-filter` | 跳过关键词过滤 |
 | `--min-score` | 最低关键词得分 |
 | `--format` | 输出格式: json / markdown / text |
 | `--max-workers` | 并发线程数（默认 5） |
+
+### ⚠️ 时间窗口说明
+
+`--days N` 覆盖的是「过去 N×24 小时」（`now() - timedelta(days=N)`），不是「前 N 个自然天」。
+如果按自然天抓取（如每天 06:00 抓「昨天」的文章），应使用 `--start-date` + `--end-date` 指定精确的日期范围，避免跨天边界导致同篇文章重复出现在连续两次抓取中。
+
+```bash
+# ❌ 过去24小时（会跨越两个自然天，易产生重复）
+python3 scripts/fetch_rss.py --days 1
+
+# ✅ 昨天一整天（精确的自然天范围）
+yesterday=$(date -d 'yesterday' '+%Y-%m-%d')
+python3 scripts/fetch_rss.py --start-date "$yesterday" --end-date "$yesterday"
+```
+
+## Cron 配置
+
+用于 `rss-to-notion-daily` cron 任务（每天早上 06:00 Asia/Shanghai 执行）：
+
+```bash
+cd /home/kk/Documents/Github/writing-agent-skills/rss-fetcher
+yesterday=$(date -d 'yesterday' '+%Y-%m-%d')
+python3 scripts/fetch_rss.py --start-date "$yesterday" --end-date "$yesterday" --format json --max-workers 5
+```
+
+输出为 JSON 格式后，按 `source` 分组，去重写入 Notion 数据库 `64533ee1-58c0-4906-ae17-dbacbf285ce6`。
+字段映射：title → 名称、link → 链接、source → 来源、description → 摘要（截取前 2000 字符，Notion rich_text 限制）。
 
 ## 已知不可用源（11 个）
 
